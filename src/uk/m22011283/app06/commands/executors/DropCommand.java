@@ -5,6 +5,10 @@ import uk.m22011283.app06.commands.CommandExecutor;
 
 import java.util.List;
 
+/**
+ * Allows a player to drop an item in their inventory into the current
+ * room's inventory.
+ */
 public class DropCommand implements CommandExecutor {
     @Override
     public boolean onCommand(Player player,

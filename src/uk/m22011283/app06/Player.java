@@ -6,7 +6,7 @@ import uk.m22011283.app06.triggers.Trigger;
 import java.util.*;
 
 /**
- * Represents a player
+ * Represents a player.
  */
 public class Player extends Entity implements Container {
     private final Set<Item> inventory = new HashSet<>();
@@ -86,6 +86,10 @@ public class Player extends Entity implements Container {
         }
     }
 
+    /**
+     * Drops an item from the player inventory.
+     * @param item Item to drop.
+     */
     public void dropItem(Item item) {
         if (this.inventory.contains(item)) {
             this.moveItem(item, this.currentRoom);

@@ -8,11 +8,15 @@ import uk.m22011283.app06.rooms.Room;
 
 import java.util.List;
 
+/**
+ * Allows a player to move in one of four relative directions: North,
+ * East, South, and West.
+ */
 public class MoveCommand implements CommandExecutor {
     private final Map map;
 
     /**
-     * Creates a move command executor.
+     * Construct a move command executor.
      * @param map Game map
      */
     public MoveCommand(Map map) {

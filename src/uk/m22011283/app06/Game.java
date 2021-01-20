@@ -15,13 +15,14 @@ import java.util.List;
 
 
 /**
- * Main game class
+ * Main game class.
  */
 public class Game {
     private final Map map = new Map();
     private final Player player;
 
     public Game() {
+        // Create the player and place them in the starting room
         Room startingRoom = this.map.getStartingRoom().orElseThrow();
         this.player = new Player("P1", startingRoom);
 

@@ -4,7 +4,7 @@ import uk.m22011283.app06.Entity;
 import uk.m22011283.app06.Item;
 import uk.m22011283.app06.Player;
 
-public class Trigger extends Entity {
+public abstract class Trigger extends Entity {
     /**
      * @see Entity#Entity(String, String)
      */

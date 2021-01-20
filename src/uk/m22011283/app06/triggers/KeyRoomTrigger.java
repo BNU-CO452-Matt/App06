@@ -6,7 +6,7 @@ import uk.m22011283.app06.Player;
 import uk.m22011283.app06.rooms.KeyRoom;
 
 /**
- * Key room trigger, allows player to interact with room
+ * Key room trigger, allows player to interact with room.
  */
 public class KeyRoomTrigger extends Trigger {
     public KeyRoomTrigger() {

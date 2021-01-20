@@ -4,13 +4,26 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
-
+/**
+ * Represents a collection of generic values tied to each cardinal
+ * direction. Also allows for iteration of those values as wrapped
+ * Direction<T> objects.
+ *
+ * @param <T> Generic type value
+ */
 public class Directional<T> implements Iterable<Direction<T>> {
     private final Direction<T> north;
     private final Direction<T> south;
     private final Direction<T> east;
     private final Direction<T> west;
 
+    /**
+     * Construct a directional.
+     * @param north Value for North
+     * @param south Value for South
+     * @param east Value for East
+     * @param west Value for West
+     */
     public Directional(T north, T south, T east, T west) {
         this.north = new Direction<>(north, Cardinal.NORTH);
         this.south = new Direction<>(south, Cardinal.SOUTH);
@@ -31,6 +44,11 @@ public class Directional<T> implements Iterable<Direction<T>> {
         return this.west.getValue();
     }
 
+    /**
+     * Get a wrapped Direction object for a given cardinal direction.
+     * @param cardinal Cardinal direction.
+     * @return
+     */
     public Direction<T> getDirection(Cardinal cardinal) {
         return switch (cardinal) {
             case NORTH -> this.north;

@@ -9,9 +9,17 @@ import uk.m22011283.app06.rooms.Room;
 
 import java.util.List;
 
+/**
+ * Allows a player to get information about their environment, or the
+ * descriptions of items in their inventory and the room around them.
+ */
 public class ExamineCommand implements CommandExecutor {
     private final Map map;
 
+    /**
+     * Construct an examine command executor.
+     * @param map Game map required to provide environment descriptions.
+     */
     public ExamineCommand(Map map) {
         this.map = map;
     }

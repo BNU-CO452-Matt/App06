@@ -11,6 +11,9 @@ public class Item extends Entity {
         this.itemType = itemType;
     }
 
+    /**
+     * @return Item type/id
+     */
     public ItemType getItemType() {
         return itemType;
     }

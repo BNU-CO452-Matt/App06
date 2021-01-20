@@ -3,6 +3,10 @@ package uk.m22011283.app06.rooms;
 import uk.m22011283.app06.GameState;
 import uk.m22011283.app06.Player;
 
+/**
+ * Final room, if the player has unlocked all the keyholes, they will be
+ * able to exit and win the game, otherwise they will give up and lose.
+ */
 public class ExitRoom extends Room {
     public ExitRoom() {
         super("Exit Room", "The way out.");
@@ -15,9 +19,11 @@ public class ExitRoom extends Room {
          && GameState.isBlueKeyDone()) {
             player.sendMessage(String.format(
                     "You escaped!%nScore: %d", GameState.getScore()));
-            System.exit(0);
         } else {
-            player.sendMessage("Door locked, you failed.");
+            player.sendMessage("Door locked, you give up.");
+
         }
+
+        System.exit(0);
     }
 }

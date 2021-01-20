@@ -3,7 +3,7 @@ package uk.m22011283.app06.rooms;
 import uk.m22011283.app06.Player;
 
 /**
- * Represents the starting location
+ * Represents the starting location.
  */
 public class SpawnRoom extends Room {
     public static final String SPAWN_ROOM_NAME = "Spawn";

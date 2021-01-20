@@ -11,32 +11,46 @@ public class GameState {
     private static int score = 0;
 
     public static boolean isRedKeyDone() {
-        GameState.score += 20;
         return GameState.redKeyDone;
     }
     public static boolean isGreenKeyDone() {
-        GameState.score += 20;
         return GameState.greenKeyDone;
     }
     public static boolean isBlueKeyDone() {
-        GameState.score += 20;
         return GameState.blueKeyDone;
     }
 
-    public static void setRedKeyDone(boolean redKeyDone) {
-        GameState.redKeyDone = redKeyDone;
+    /**
+     * Complete red key objective and add to score.
+     */
+    public static void setRedKeyDone() {
+        if (!GameState.redKeyDone) {
+            GameState.score += 20;
+            GameState.redKeyDone = true;
+        }
     }
-    public static void setGreenKeyDone(boolean greenKeyDone) {
-        GameState.greenKeyDone = greenKeyDone;
+
+    /**
+     * Complete green key objective and add to score.
+     */
+    public static void setGreenKeyDone() {
+        if (!GameState.greenKeyDone) {
+            GameState.score += 20;
+            GameState.greenKeyDone = true;
+        }
     }
-    public static void setBlueKeyDone(boolean blueKeyDone) {
-        GameState.blueKeyDone = blueKeyDone;
+
+    /**
+     * Complete blue key objective and add to score.
+     */
+    public static void setBlueKeyDone() {
+        if (!GameState.blueKeyDone) {
+            GameState.score += 20;
+            GameState.blueKeyDone = true;
+        }
     }
 
     public static int getScore() {
         return GameState.score;
-    }
-    public static void setScore(int score) {
-        GameState.score = score;
     }
 }

@@ -6,6 +6,9 @@ import uk.m22011283.app06.commands.CommandManager;
 
 import java.util.List;
 
+/**
+ * Allows a player to print a list of commands.
+ */
 public class HelpCommand implements CommandExecutor {
     @Override
     public boolean onCommand(Player player,

@@ -5,6 +5,9 @@ import uk.m22011283.app06.commands.CommandExecutor;
 
 import java.util.List;
 
+/**
+ * Allows a player to exit the game.
+ */
 public class ExitCommand implements CommandExecutor {
     @Override
     public boolean onCommand(Player player,
